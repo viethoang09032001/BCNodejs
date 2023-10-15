@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= data.title %>
+  </title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Form sửa thông tin sản phẩm: <%= data.pro.name %>
+    </h1>
+    <form action="/updateproduct" method="post">
+      <input type="hidden" class="form-control" id="id" name="id" value="<%= data.pro.id %>">
+      <div class="mb-3">
+        <!-- <label for="name" class="form-label">Tên sản phẩm</label> -->
+        <input type="hidden" class="form-control" id="name" name="name" value="<%= data.pro.name %>">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">price</label>
+        <input type="text" class="form-control" id="price" name="price" value="<%= data.pro.price %>">
+      </div>
+      <div class="mb-3">
+        <label for="Branch" class="form-label">Branch</label>
+        <input type="text" class="form-control" id="Branch" name="branch" value="<%= data.pro.branch %>">
+      </div>
+      <div class="mb-3">
+        <label for="Catogorise" class="form-label">Catogorise</label>
+        <input type="text" class="form-control" id="Catogorise" name="maloai" value="<%= data.pro.maloai %>">
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
