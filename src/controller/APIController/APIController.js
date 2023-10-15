@@ -160,7 +160,6 @@ const updateProduct = async (req, res) => {
       if (await productModel.detailProduct(proinfo.id)) {
         await productModel.updateProduct(
           proinfo.id,
-          proinfo.name,
           proinfo.price,
           proinfo.branch,
           proinfo.maloai
