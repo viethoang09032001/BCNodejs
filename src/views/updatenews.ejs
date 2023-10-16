@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= data.title %></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Form sửa thông tin tin tức: <%= data.news.name %></h1>
+      <form
+        action="/updatenews"
+        method="post"
+      >
+        <input
+          type="hidden"
+          class="form-control"
+          id="id"
+          name="id"
+          value="<%= data.news.id %>"
+        />
+        <div class="mb-3">
+          <label
+            for="title"
+            class="form-label"
+            >Tiêu đề</label
+          >
+          <input
+            class="form-control"
+            id="title"
+            name="title"
+            value="<%= data.news.title %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="content"
+            class="form-label"
+            >Content</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="content"
+            name="content"
+            value="<%= data.news.content %>"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

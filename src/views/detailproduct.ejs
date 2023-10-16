@@ -1,0 +1,23 @@
+<% if (data.rows) {%>
+    Details Product: <%= data.rows.name %>
+    <table class="table">
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="col">Name</th>
+          <td><%= data.rows.name%></td>
+        </tr>
+        <tr>
+          <th scope="col">Price</th>
+          <td><%= data.rows.price%></td>
+        </tr>
+        <tr>
+          <th scope="col">Branch</th>
+          <td><%= data.rows.branch%></td>
+        </tr>
+        <tr>
+            <th scope="col">Catogories</th>
+            <td><%= data.rows.maloai%></td>
+        </tr>
+      </tbody>
+    </table>
+    <% } %>

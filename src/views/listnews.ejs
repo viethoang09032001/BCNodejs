@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= data.title %>
+  </title>
+</head>
+
+<body>
+  <div class="container mt-3">
+    <table class="table table-warning table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Setting</th>
+        </tr>
+      </thead>
+      <% for(let i=0;i<data.rows.length;i++) { %>
+        <tbody>
+          <tr>
+            <td>
+              <%= data.rows[i].id %>
+            </td>
+            <td>
+              <%= data.rows[i].title %>
+            </td>
+            <td>
+              <%= data.rows[i].content %>
+            </td>
+            <td>
+
+              <a style="text-decoration: none" href="/detailnews/<%= data.rows[i].id %>">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </a>
+
+              <a style="text-decoration: none" href="/updatenews/<%= data.rows[i].id %>">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </a>
+
+              <a style="text-decoration: none" href="/deletenews/<%= data.rows[i].id %>">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+        <%}%>
+    </table>
+  </div>
+</body>
+
+</html>

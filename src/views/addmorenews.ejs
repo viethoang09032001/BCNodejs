@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= data.title %></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Thêm mới tin tức</h1>
+
+      <form
+        action="/addmorenews"
+        method="post"
+      >
+        <div class="mb-3">
+          <label
+            for="title"
+            class="form-label"
+            >Tên tin tức</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+          />
+        </div>
+        <div class="mb-3">
+          <label
+            for="content"
+            class="form-label"
+            >Nội dung</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="content"
+            name="content"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          Thêm mới
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

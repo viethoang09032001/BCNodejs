@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= data.title %>
+    </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Thêm mới sản phẩm </h1>
+
+        <form action="/addNewproduct" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="Giá" class="form-label">Giá</label>
+                <input type="text" class="form-control" id="price" name="price">
+            </div>
+            <div class="mb-3">
+                <label for="Hãng" class="form-label">Hãng</label>
+                <input type="text" class="form-control" id="branch" name="branch">
+            </div>
+            <div class="mb-3">
+                <label for="loai" class="form-label">Loại</label>
+                <input type="text" class="form-control" id="maloai" name="maloai">
+            </div>
+        
+             <button type="submit" class="btn btn-primary">Đăng ký</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

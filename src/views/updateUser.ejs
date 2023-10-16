@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= data.title %>
+  </title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Form Sua Thong Tin Nguoi Dung: <%= data.user.username %>
+    </h1>
+    <form action="/updateUser" method="post">
+      <input type="hidden" class="form-control" id="name" name="username" value="<%= data.user.username %>">
+      <div class="mb-3">
+        <label for="name" class="form-label">Tên</label>
+        <input type="text" class="form-control" id="name" name="fullname" value="<%= data.user.fullname %>">
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Giới tính</label>
+        <select class="form-select" id="gender" name="sex">
+          <% for(const gender of data.gender) {%>
+            <% if (gender==data.sex) {%>
+              <option selected value="<%= gender %>">
+                <%= gender %>
+              </option>
+              <%} else {%>
+                <option value="<%= gender %>">
+                  <%= gender %>
+                </option>
+                <% } %>
+                  <%}%>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Địa chỉ</label>
+        <textarea class="form-control" id="address" name="address"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary"> Save</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
