@@ -8,4 +8,5 @@ const getHomePage = (req,res) => {
       }
     return res.render("home",{data:{title: 'homepage',page:'main', session: session}})
 }
+
 export default getHomePage
